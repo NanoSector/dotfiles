@@ -1,3 +1,7 @@
 # This is Git's per-user configuration file.
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[include]
+    # Store persistent per-user settings in here.
+	path = .config/git/user
