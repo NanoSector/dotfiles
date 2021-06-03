@@ -2,6 +2,9 @@
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 
+[init]
+    defaultBranch = main
+
 [include]
     # Store persistent per-user settings in here.
 	path = .config/git/user
