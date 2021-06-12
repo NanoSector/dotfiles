@@ -9,6 +9,7 @@ sudo dnf install composer pre-commit
 
 echo '--- Installing CLI tools (needs superuser access for DNF)'
 sudo dnf install bat fish fd-find fzf gh micro ncdu neofetch starship wl-clipboard tmux
+micro -plugin install filemanager fzf
 
 echo '--- Installing NodeJS and global tools (needs superuser access)'
 sudo dnf install nodejs npm
