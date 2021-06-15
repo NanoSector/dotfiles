@@ -14,6 +14,10 @@ echo '--- Installing CLI tools'
 brew install act bat exa fish mariadb postgresql neofetch starship smartmontools tmux watch youtube-dl fzf fd micro less
 micro -plugin install filemanager fzf
 
+echo '--- Installing fonts'
+brew tap homebrew/cask-fonts
+brew install font-jetbrains-mono-nerd-font
+
 echo '--- Installing NodeJS global tools'
 npm i -g diff-so-fancy tldr
 
