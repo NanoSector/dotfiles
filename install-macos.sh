@@ -21,6 +21,9 @@ brew install font-jetbrains-mono-nerd-font
 echo '--- Installing NodeJS global tools'
 npm i -g diff-so-fancy tldr
 
+echo '--- Installing Composer global tools'
+composer global require laravel/installer laravel/valet
+
 echo '--- Installing Homebrew casks'
 brew install --cask \
     0xed \
