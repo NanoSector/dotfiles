@@ -179,15 +179,17 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
 	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGkCwwVFlUkbnVsbNQNDg8QERIT
-	FFZOU1NpemVYTlNmRmxhZ3NWTlNOYW1lViRjbGFzcyNAJgAAAAAAABAQgAKAA18QH0Zp
-	cmFDb2RlTmVyZEZvbnRDb21wbGV0ZU0tTGlnaHTSFxgZGlokY2xhc3NuYW1lWCRjbGFz
-	c2VzVk5TRm9udKIZG1hOU09iamVjdAgRGiQpMjdJTFFTWF5nbnd+hY6QkpS2u8bP1tkA
-	AAAAAAABAQAAAAAAAAAcAAAAAAAAAAAAAAAAAAAA4g==
+	FFZOU1NpemVYTlNmRmxhZ3NWTlNOYW1lViRjbGFzcyNAKAAAAAAAABAQgAKAA18QJUpl
+	dEJyYWluc01vbm9OZXJkRm9udENvbXBsZXRlTS1NZWRpdW3SFxgZGlokY2xhc3NuYW1l
+	WCRjbGFzc2VzVk5TRm9udKIZG1hOU09iamVjdAgRGiQpMjdJTFFTWF5nbnd+hY6QkpS8
+	wczV3N8AAAAAAAABAQAAAAAAAAAcAAAAAAAAAAAAAAAAAAAA6A==
 	</data>
 	<key>FontAntialias</key>
 	<true/>
+	<key>FontHeightSpacing</key>
+	<integer>1</integer>
 	<key>FontWidthSpacing</key>
-	<real>1</real>
+	<integer>1</integer>
 	<key>ProfileCurrentVersion</key>
 	<real>2.0699999999999998</real>
 	<key>RunCommandAsShell</key>
@@ -247,6 +249,8 @@
 	WCRjbGFzc2VzV05TQ29sb3KiFhhYTlNPYmplY3QIERokKTI3SUxRU1ddZGp3foWHiY6Z
 	oqqtAAAAAAAAAQEAAAAAAAAAGQAAAAAAAAAAAAAAAAAAALY=
 	</data>
+	<key>UseBoldFonts</key>
+	<true/>
 	<key>UseBrightBold</key>
 	<false/>
 	<key>columnCount</key>
