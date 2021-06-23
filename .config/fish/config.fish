@@ -14,6 +14,7 @@ set fish_greeting
 # Aliases
 alias l="exa --long --header --git --grid"
 alias tree="exa -T --long"
+alias git-clean="~/.bin/cleanup-branches.sh"
 
 # Tool replacements
 alias ls="l"

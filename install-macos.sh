@@ -66,6 +66,7 @@ brew install --cask \
     
 echo '--- Installing configuration files'
 cp -rv .config ~
+cp -rv .bin ~
 cp -v .tmux.conf ~
 cp -v .gitconfig ~
 

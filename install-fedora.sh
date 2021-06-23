@@ -32,5 +32,6 @@ sudo dnf install gnome-extensions-app gnome-tweaks geary
 
 echo '--- Installing configuration files'
 cp -rv .config ~
+cp -rv .bin ~
 cp -v .tmux.conf ~
 cp -v .gitconfig ~
