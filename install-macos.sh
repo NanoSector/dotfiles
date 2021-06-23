@@ -11,11 +11,18 @@ xcode-select --install || true
 brew install cocoapods composer gh php php@7.4 node hugo pre-commit swiftformat
 
 echo '--- Installing CLI tools'
-brew install act bat exa fish mariadb postgresql neofetch starship smartmontools tmux watch youtube-dl fzf fd micro
+brew install act bat exa fish mariadb postgresql neofetch starship smartmontools tmux watch youtube-dl fzf fd micro less
 micro -plugin install filemanager fzf
+
+echo '--- Installing fonts'
+brew tap homebrew/cask-fonts
+brew install font-jetbrains-mono-nerd-font
 
 echo '--- Installing NodeJS global tools'
 npm i -g diff-so-fancy tldr
+
+echo '--- Installing Composer global tools'
+composer global require laravel/installer laravel/valet
 
 echo '--- Installing Homebrew casks'
 brew install --cask \
