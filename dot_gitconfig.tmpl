@@ -1,0 +1,43 @@
+# This is Git's per-user configuration file.
+
+# Delta configuration
+[core]
+	pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[add.interactive]
+    useBuiltin = false # required for git 2.37.0
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+# End Delta configuration
+
+[init]
+    defaultBranch = main
+
+[include]
+    # Store persistent per-user settings in here.
+	path = .config/git/user
+
+[user]
+	name = NanoSector
+	email = rick@nanosector.nl
+	signingkey = 70F33E20
+
+[commit]
+    gpgsign = true
+
+[gpg]
+	program = gpg2
+
+[push]
+	autoSetupRemote = true
