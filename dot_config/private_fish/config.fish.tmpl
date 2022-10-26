@@ -1,0 +1,29 @@
+eval (/opt/homebrew/bin/brew shellenv)
+
+zoxide init fish | source
+
+# PATH
+fish_add_path ~/.bin
+fish_add_path ~/.composer/vendor/bin
+
+{{ if ( and ( eq .chezmoi.os "darwin" ) ( eq .chezmoi.arch "arm64" ) ) -}}
+# Environment variables - macOS Apple Silicon
+set -gx CPATH $CPATH /opt/homebrew/include
+set -gx LIBRARY_PATH $LIBRARY_PATH /opt/homebrew/lib
+{{- end }}
+set -gx EDITOR $(which micro)
+
+# Fish configuration
+# Disable Fish greeting
+set fish_greeting
+
+# Aliases
+alias cd="z"
+alias l="exa --long --header --git --grid --icons"
+alias tree="exa -T --long"
+alias git-clean="~/.bin/cleanup-branches.sh"
+
+# Tool replacements
+alias ls="l"
+alias nano="micro"
+alias cat="bat"

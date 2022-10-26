@@ -15,6 +15,10 @@ brew "hugo"
 brew "lazygit"
 brew "tilt"
 
+# Symfony
+tap "symfony-cli/tap"
+brew "symfony-cli"
+
 # CLI tools
 # Do not add packages which can be fetched from your distro package manager!
 # Add macOS specific stuff below!
@@ -51,6 +55,7 @@ brew "less"
 brew "mas"
 brew "ncdu"
 brew "neofetch"
+brew "php"
 brew "smartmontools"
 brew "tmux"
 brew "watch"
@@ -125,4 +130,8 @@ mas "SponsorBlock", id: 1573461917
 mas "Super Agent", id: 1568262835
 mas "Tampermonkey", id: 1482490089
 EOF
+
+echo "==> Installing Laravel Valet"
+composer global require laravel/valet
+
 {{ end -}}
