@@ -8,6 +8,7 @@ packages:
     - 'eza'
     - 'fd'
     - 'fish'
+    - 'fresh-editor'
     - 'fzf'
     - 'jq'
     - 'lazygit'

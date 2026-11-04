@@ -1,0 +1,58 @@
+{
+  "editor": {
+    "show_horizontal_scrollbar": true,
+    "enable_semantic_tokens_full": true,
+    "use_terminal_bg": true,
+    "show_tilde": false,
+    "completion_popup_auto_show": true,
+    "status_bar": {
+      "right": [
+        "{read_only}",
+        "{line_ending}",
+        "{encoding}",
+        "{language}",
+        "{lsp}",
+        "{warnings}",
+        "{update}",
+        "{palette}",
+        "{git_statusbar:branch}",
+        "{clock}"
+      ],
+      "left": [
+        "{trust}",
+        "{remote}",
+        "{terminal_restart}",
+        "{cursor}",
+        "{diagnostics}",
+        "{cursor_count}",
+        "{messages}",
+        "{filename}"
+      ]
+    },
+    "trim_trailing_whitespace_on_save": true,
+    "rainbow_indentation": true,
+    "nerd_font_icons": true,
+    "ephemeral_file_patterns": [
+      "**/.git/**",
+      "**/vendor/**",
+      "**/node_modules/**"
+    ]
+  },
+  "self_update": false,
+  "file_browser": {
+    "show_hidden": true
+  },
+  "file_explorer": {
+    "show_hidden": true
+  },
+  "plugins": {
+    "welcome_screen": {
+      "settings": {
+        "showOnStartup": false
+      }
+    }
+  },
+  "auto_attach": false,
+  "check_for_updates": false,
+  "theme": "builtin://dracula"
+}

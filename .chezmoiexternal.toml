@@ -13,3 +13,7 @@
 [".config/yazi/Catppuccin-mocha.tmTheme"]
     type = "file"
     url = "https://github.com/catppuccin/bat/raw/refs/heads/main/themes/Catppuccin%20Mocha.tmTheme"
+
+[".config/fresh/themes/catppuccin-mocha.json"]
+    type = "file"
+    url = "https://github.com/milon/catppuccin-fresh/raw/refs/heads/master/catppuccin-mocha.json"
