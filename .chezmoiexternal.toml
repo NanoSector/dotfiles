@@ -5,3 +5,11 @@
 [".config/micro/colorschemes/catppuccin-mocha-transparent.micro"]
     type = "file"
     url = "https://github.com/catppuccin/micro/raw/refs/heads/main/themes/catppuccin-mocha-transparent.micro"
+
+[".config/yazi/theme.toml"]
+    type = "file"
+    url = "https://github.com/catppuccin/yazi/raw/refs/heads/main/themes/mocha/catppuccin-mocha-lavender.toml"
+# This is also defined above, but this allows us to import the Catppuccin theme as-is without having to mess with the file contents.
+[".config/yazi/Catppuccin-mocha.tmTheme"]
+    type = "file"
+    url = "https://github.com/catppuccin/bat/raw/refs/heads/main/themes/Catppuccin%20Mocha.tmTheme"
