@@ -1,0 +1,58 @@
+packages:
+  shared:
+    brews:
+    - 'bat'
+    - 'chezmoi'
+    - 'git-delta'
+    - 'duf'
+    - 'eza'
+    - 'fd'
+    - 'fish'
+    - 'fzf'
+    - 'jq'
+    - 'lazygit'
+    - 'micro'
+    - 'ncdu'
+    - 'starship'
+    - 'zoxide'
+
+  darwin:
+    brews:
+    - 'bash'
+    - 'less'
+    - 'mas'
+    - 'watch'
+    - 'wget'
+    casks:
+    - 1password-cli
+    - airbuddy
+    - amethyst
+    - android-platform-tools
+    - betterdisplay
+    - blockblock
+    - capacities
+    - daisydisk
+    - dbeaver-community
+    - firefox
+    - fork
+    - ghostty
+    - iina
+    - jetbrains-toolbox
+    - keyboardcleantool
+    - knockknock
+    - libreoffice
+    - little-snitch
+    - maccy
+    - netnewswire
+    - nextcloud
+    - openboardview
+    - openlogi
+    - openmtp
+    - pearcleaner
+    - remote-buddy
+    - telegram
+    - transmit
+    - tuta-mail
+    - ungoogled-chromium
+    - vscodium
+    - whatcable

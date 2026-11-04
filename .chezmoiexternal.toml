@@ -1,0 +1,7 @@
+[".config/bat/themes/Catppuccin Mocha.tmTheme"]
+    type = "file"
+    url = "https://github.com/catppuccin/bat/raw/refs/heads/main/themes/Catppuccin%20Mocha.tmTheme"
+
+[".config/micro/colorschemes/catppuccin-mocha-transparent.micro"]
+    type = "file"
+    url = "https://github.com/catppuccin/micro/raw/refs/heads/main/themes/catppuccin-mocha-transparent.micro"

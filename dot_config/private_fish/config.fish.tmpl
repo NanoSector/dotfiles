@@ -1,0 +1,28 @@
+eval ({{ .homebrew_path }}/brew shellenv)
+
+# Fixes config file locations for e.g. lazygit and ghostty
+set -gx XDG_CONFIG_HOME "$HOME/.config"
+
+# EDITOR configuration
+set -gx EDITOR $(which micro)
+set -gx MICRO_TRUECOLOR 1
+
+# Fish configuration
+# Disable Fish greeting
+set fish_greeting
+
+# Aliases
+alias cd="z"
+alias l="eza --long --header --git"
+alias tree="eza -T --long"
+
+# Tool replacements
+alias ls="l"
+alias nano="micro"
+alias cat="bat"
+alias df="duf"
+set -gx MANPAGER "bat -plman"
+
+# Initialise utilities
+zoxide init fish | source
+starship init fish | source

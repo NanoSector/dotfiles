@@ -1,0 +1,40 @@
+# This is Git's per-user configuration file.
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true
+    features = catppuccin-mocha
+    line-numbers = true
+    hyperlinks = true
+
+[merge]
+    conflictStyle = zdiff3
+
+[init]
+    defaultBranch = main
+
+[include]
+    # Store persistent per-user settings in here.
+    path = .config/git/user
+
+[push]
+    autoSetupRemote = true
+
+[user]
+	name = NanoSector
+	email = 1280380+NanoSector@users.noreply.github.com
+	signingKey = {{ onepasswordRead "op://Private/ndqlh67lc7uf2cjzhkiniedc5y/public key" }}
+
+# Configure commit signing using the key in 1Password
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
