@@ -17,3 +17,7 @@
 [".config/fresh/themes/catppuccin-mocha.json"]
     type = "file"
     url = "https://github.com/milon/catppuccin-fresh/raw/refs/heads/master/catppuccin-mocha.json"
+
+[".local/share/konsole/catppuccin-mocha.colorscheme"]
+    type = "file"
+    url = "https://github.com/catppuccin/konsole/raw/refs/heads/main/themes/catppuccin-mocha.colorscheme"
