@@ -9,6 +9,11 @@ set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx EDITOR $(which micro)
 set -gx MICRO_TRUECOLOR 1
 
+{{- if ne .chezmoi.os "darwin" }}
+# Use KDE Wallet for pinentry
+set -gx PINENTRY_KDE_USE_WALLET 1
+{{- end }}
+
 # Fish configuration
 # Disable Fish greeting
 set fish_greeting
