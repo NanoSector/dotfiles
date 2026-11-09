@@ -60,7 +60,6 @@ packages:
     - remote-buddy
     - telegram
     - transmit
-    - tuta-mail
     - ungoogled-chromium
     - vscodium
     - whatcable
