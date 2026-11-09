@@ -1,6 +1,6 @@
 eval ({{ .homebrew_path }}/brew shellenv)
 
-fish_add_path ~/.local/bin
+fish_add_path -g ~/.local/bin
 
 # Fixes config file locations for e.g. lazygit and ghostty
 set -gx XDG_CONFIG_HOME "$HOME/.config"
