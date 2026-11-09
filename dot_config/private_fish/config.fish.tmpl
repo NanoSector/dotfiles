@@ -1,6 +1,8 @@
 eval ({{ .homebrew_path }}/brew shellenv)
 
+# $PATH manipulations - always use -g or -P to keep this list authorative! asdfvm should stay the last entry
 fish_add_path -g ~/.local/bin
+fish_add_path -g (test -n "$ASDF_DATA_DIR"; and echo $ASDF_DATA_DIR; or echo $HOME/.asdf)/shims
 
 # Fixes config file locations for e.g. lazygit and ghostty
 set -gx XDG_CONFIG_HOME "$HOME/.config"
@@ -41,20 +43,6 @@ zoxide init fish | source
 starship init fish | source
 fzf --fish | source
 direnv hook fish | source
-
-# Initialise asdfvm
-if test -z $ASDF_DATA_DIR
-    set _asdf_shims "$HOME/.asdf/shims"
-else
-    set _asdf_shims "$ASDF_DATA_DIR/shims"
-end
-
-# Do not use fish_add_path (added in Fish 3.2) because it
-# potentially changes the order of items in PATH
-if not contains $_asdf_shims $PATH
-    set -gx --prepend PATH $_asdf_shims
-end
-set --erase _asdf_shims
 
 # Initialise FZF w/ Catppuccin Mocha
 set -gx FZF_DEFAULT_OPTS "\
