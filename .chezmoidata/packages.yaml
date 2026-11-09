@@ -26,6 +26,7 @@ packages:
   darwin:
     brews:
     - 'bash'
+    - 'git-lfs'
     - 'less'
     - 'mas'
     - 'watch'

@@ -1,11 +1,12 @@
 # This is Git's per-user configuration file.
 
 [core]
+    hooksPath = ~/.config/git/hooks
     pager = delta
 
+# Configure Delta for diffs
 [interactive]
     diffFilter = delta --color-only
-
 [delta]
     navigate = true  # use n and N to move between diff sections
     dark = true
@@ -13,32 +14,39 @@
     line-numbers = true
     hyperlinks = true
 
+# Git operations settings
+[fetch]
+    prune = true
+[push]
+    autoSetupRemote = true
 [merge]
     conflictStyle = zdiff3
-
 [init]
     defaultBranch = main
 
-[include]
-    # Store persistent per-user settings in here.
-    path = .config/git/user
+# Git LFS enablement
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 
-[push]
-    autoSetupRemote = true
-
+# User, authentication and signing settings
 [user]
-	name = NanoSector
-	email = 1280380+NanoSector@users.noreply.github.com
-	signingKey = {{ onepasswordRead "op://Private/ndqlh67lc7uf2cjzhkiniedc5y/public key" }}
-
-# Configure commit signing using the key in 1Password
+    name = {{ .git_name }}
+    email = {{ .git_email }}
+    signingKey = {{ onepasswordRead .git_op_signingkey }}
 [commit]
-	gpgsign = true
+    gpgsign = true
 [gpg]
-	format = ssh
+    format = ssh
 [gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+{{- if eq .chezmoi.os "darwin" }}
+    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+{{- else }}
+    program = /opt/1Password/op-ssh-sign
+{{- end }}
 
 # Bitbucket alias; see https://community.atlassian.com/forums/discussion/3234032/upcoming-change-to-bitbucket-cloud-ssh-access-move-from-bitbucket-org-to-ssh-bitbucket-org
 [url "git@ssh.bitbucket.org:"]
-	insteadOf = git@bitbucket.org:
+    insteadOf = git@bitbucket.org:
