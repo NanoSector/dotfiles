@@ -8,7 +8,7 @@ fish_add_path -g (test -n "$ASDF_DATA_DIR"; and echo $ASDF_DATA_DIR; or echo $HO
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 
 # EDITOR configuration
-set -gx EDITOR $(which micro)
+set -gx EDITOR $(which fresh)
 set -gx MICRO_TRUECOLOR 1
 
 {{- if ne .chezmoi.os "darwin" }}
@@ -30,7 +30,7 @@ alias tree="eza -T --long"
 
 # Tool replacements
 alias ls="l"
-alias nano="micro"
+alias nano="fresh"
 alias cat="bat"
 alias df="duf"
 alias cm="chezmoi"
