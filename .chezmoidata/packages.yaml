@@ -1,20 +1,25 @@
 packages:
   shared:
     brews:
+    - 'asdf'
     - 'bat'
     - 'chezmoi'
-    - 'git-delta'
+    - 'direnv'
+    - 'dive'
     - 'duf'
     - 'eza'
     - 'fd'
     - 'fish'
+    - 'fish-lsp'
     - 'fresh-editor'
     - 'fzf'
+    - 'git-delta'
     - 'jq'
     - 'lazygit'
     - 'micro'
     - 'ncdu'
     - 'starship'
+    - 'tlrc'
     - 'yazi'
     - 'zoxide'
 

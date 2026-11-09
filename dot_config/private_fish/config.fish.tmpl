@@ -32,9 +32,30 @@ alias cat="bat"
 alias df="duf"
 alias cm="chezmoi"
 alias lg="lazygit"
+alias tg="terragrunt"
 set -gx MANPAGER "bat -plman"
 
-# FZF configuration - Catppuccin Mocha
+# Initialise utilities
+zoxide init fish | source
+starship init fish | source
+fzf --fish | source
+direnv hook fish | source
+
+# Initialise asdfvm
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
+end
+
+# Do not use fish_add_path (added in Fish 3.2) because it
+# potentially changes the order of items in PATH
+if not contains $_asdf_shims $PATH
+    set -gx --prepend PATH $_asdf_shims
+end
+set --erase _asdf_shims
+
+# Initialise FZF w/ Catppuccin Mocha
 set -gx FZF_DEFAULT_OPTS "\
 --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
 --color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
@@ -46,8 +67,3 @@ set -gx FZF_CTRL_T_OPTS "\
 --walker-skip .git,node_modules,target,vendor \
 --preview 'bat -n --color=always {}' \
 --bind 'ctrl-/:change-preview-window(down|hidden|)'"
-
-# Initialise utilities
-zoxide init fish | source
-starship init fish | source
-fzf --fish | source
