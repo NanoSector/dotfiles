@@ -54,5 +54,5 @@
   },
   "auto_attach": false,
   "check_for_updates": false,
-  "theme": "builtin://dracula"
+  "theme": "catppuccin-mocha.json"
 }
